@@ -1,3 +1,6 @@
+/*Leia três números inteiros e imprima a média aritmética entre esses 
+números.*/
+
 package application;
 
 import java.util.Locale;
