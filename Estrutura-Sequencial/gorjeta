@@ -1,0 +1,25 @@
+/*Todo restaurante, embora por lei não possa obrigar o cliente a pagar, cobra 
+10% para o garçom. Faça um programa que leia o valor gasto pelo cliente e 
+informe o valor a ser pago de gorjeta.*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite o valor da conta: ");
+		double valorConta = sc.nextDouble();
+		double gorjeta = valorConta * 0.10;
+		System.out.println("O valor da conta é igual a R$" + valorConta + ", e os 10% do garçom é R$" + gorjeta);
+
+		sc.close();
+	}
+
+}
