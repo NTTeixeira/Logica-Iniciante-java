@@ -1,0 +1,35 @@
+/*Faça um programa que solicite ao usuário que informe os coeficientes a, b e 
+c de uma equação de segundo grau, e que imprima as raízes desta equação 
+(considere que os valores informados sempre retornarão raízes reais para a 
+equação).*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Qual o valor de a: ");
+		int a = sc.nextInt();
+		System.out.print("Qual o valor de b: ");
+		int b = sc.nextInt();
+		System.out.print("Qual o valor de c: ");
+		int c = sc.nextInt();
+		System.out.println();
+		double delta = Math.pow(b, 2) - 4*a*c;
+		System.out.println("Delta: " + delta);
+		double x1 = (-b + Math.sqrt(delta)) / (2*a);
+		double x2 = (-b - Math.sqrt(delta)) / (2*a);
+		System.out.println("X1 = " + x1 + " X2 = " + x2);
+
+		sc.close();
+	}
+
+}
+
