@@ -1,0 +1,30 @@
+/*Dados três valores X,Y,Z, verificar se eles podem ser os comprimentos dos 
+lados de um triângulo. Se eles não formarem um triângulo escrever uma 
+mensagem. Considerar que o comprimento de cada lado de um triângulo é 
+menor que a soma dos outros dois lados.*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite os lados dos triangulos: ");
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int z = sc.nextInt();
+		if (x != y && z != y) {
+			System.out.println("Não é possível formar um triangulo, os lados não são iguais.");
+		} else {
+			System.out.println("Os lados do triangulo tem comprimento de " + x + ", " + y + " e " + z);
+		}
+
+		sc.close();
+	}
+}
