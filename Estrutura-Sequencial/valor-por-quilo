@@ -1,0 +1,27 @@
+/*Faça um programa que receba o valor do quilo de um produto e a quantidade de quilos do produto
+consumida calculando o valor final a ser pago.*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Qual o valor do quilo? ");
+		double valorQuilo = sc.nextDouble();
+		System.out.print("Qual quantidade você quer? ");
+		double quantidade = sc.nextDouble();
+		
+		double total = valorQuilo * quantidade;
+		
+		System.out.printf("O valor final é %.2f%n", total);
+		
+		sc.close();
+	}
+}
