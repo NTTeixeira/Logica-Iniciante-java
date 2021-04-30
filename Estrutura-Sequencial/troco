@@ -1,0 +1,27 @@
+/*Faça um programa que receba um valor que é o valor pago, um segundo valor que é o preço do produto e
+retorne o troco a ser dado.*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Qual o valor pago? ");
+		double valorPago = sc.nextDouble();
+		System.out.print("Qual o preço do produto? ");
+		double valorProduto = sc.nextDouble();
+		
+		double troco = valorPago - valorProduto;
+		
+		System.out.printf("O troco é de %.2f%n", troco);
+		
+		sc.close();
+	}
+}
