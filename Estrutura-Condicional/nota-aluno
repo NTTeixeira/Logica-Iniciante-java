@@ -1,0 +1,33 @@
+/*Faça um programa que receba as duas notas de um aluno, calcule sua média, 
+e que imprima a sua situação: 
+>= 7 -> Aprovado
+< 7 -> Reprovado*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Digite a primeira nota: ");
+		int primeiraNota = sc.nextInt();
+		System.out.print("Digite a segunda nota: ");
+		int segundaNota = sc.nextInt();
+		double media = (double)(primeiraNota + segundaNota) / 2;
+		if (media >= 11) {
+			System.out.printf("OBS:%n%s", "As notas devem ser menor do que 10.");
+		} else if (media >= 7) {
+			System.out.println("O aluno foi aprovado, " + media);
+		} else {
+			System.out.println("O aluno foi reprovado, " + media);
+		}
+
+		sc.close();
+	}
+}
