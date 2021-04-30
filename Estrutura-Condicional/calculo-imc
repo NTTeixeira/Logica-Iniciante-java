@@ -1,0 +1,38 @@
+/*Construa um programa para determinar se o indivíduo está com um peso 
+favorável. Essa situação é determinada através do IMC (Índice de Massa 
+Corpórea), que é definida como sendo a relação entre o peso (PESO – em kg) e 
+o quadrado da Altura (ALTURA – em m) do indivíduo. Ou seja,
+IMC= PESO/ALTURA2*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Qual a altura em metros? ");
+		double altura = sc.nextDouble();
+		System.out.print("Qual o peso em Kg? ");
+		double peso = sc.nextDouble();
+		double imc = peso / (Math.pow(altura, 2));
+		if (imc < 20) {
+			System.out.println("Abaixo do peso");
+		} else if (imc < 25) {
+			System.out.println("Peso normal");
+		} else if (imc < 30) {
+			System.out.println("Sobre peso");
+		} else if (imc < 40) {
+			System.out.println("Obeso");
+		} else if (imc > 40) {
+			System.out.println("Obeso Mórbido");
+		}
+
+		sc.close();
+	}
+}
