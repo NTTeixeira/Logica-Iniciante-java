@@ -1,0 +1,30 @@
+/*Elabore um algoritmo que leia dois números inteiros e mostre o resultado da diferença do maior valor pelo menor*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite dois números inteiros: ");
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
+		
+		if(n1 > n2) {
+			System.out.println("A diferença entre os números é de " + (n1 - n2));
+		}else {
+			System.out.println("A diferença entre os números é de " + (n2 - n1));
+		}
+		
+		
+
+		sc.close();
+	}
+}
