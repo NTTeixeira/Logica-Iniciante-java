@@ -1,0 +1,37 @@
+/*Faça um algoritmo que leia um número e mostre uma mensagem indicando se este número é par ou ímpar e se é
+positivo ou negativo*/
+
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite um número: ");
+		int number = sc.nextInt();
+		String sinal, valor; 
+		
+		if(number >= 0) {
+			sinal = "Positivo";
+		}else {
+			sinal = "Negativo";
+		}
+		
+		if(number % 2 == 0) {
+			valor = "Par";
+		}else {
+			valor = "Impar";
+		}
+		
+		System.out.println("O número é " + valor + " e " + sinal);
+		
+		sc.close();
+	}
+}
