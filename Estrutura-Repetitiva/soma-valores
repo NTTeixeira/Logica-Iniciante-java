@@ -1,0 +1,31 @@
+/*Escreva um programa que mostre a soma dos valores de 1 a 10, mostrando os resultados parciais:
+1. 1+2=3
+2. 3+3=6....*/
+
+package application;
+
+import java.util.Locale;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		int sum2 = 0;
+		
+		
+		for(int i=1; i<=10; i++) {
+			sum += i;
+			sum2 = i + 1;
+			System.out.println(i + ". " + sum + " + " + (sum2) + " = " + (sum + sum2));
+		}
+
+		sc.close();
+
+	}
+
+}
