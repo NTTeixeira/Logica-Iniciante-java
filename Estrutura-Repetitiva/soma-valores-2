@@ -1,0 +1,43 @@
+/*Escrever um programa que leia dois valores e imprima a soma de todos os números inteiros impares neste
+intervalo.*/
+
+package application;
+
+import java.util.Locale;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite dois valores: ");
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
+		
+		int n3 = 0, sum = 0;
+		
+		if(n1 > n2) {
+			n3 = n2;
+			n2 = n1; 
+		}else {
+			n3 = n1;
+			n1 = n2;
+		}
+		
+		for(int i=n3; i<=n2; i++) {
+			
+			if(i%2!=0) {
+				sum += i;
+			}
+		}		
+		System.out.println(sum);
+
+		sc.close();
+
+	}
+
+}
