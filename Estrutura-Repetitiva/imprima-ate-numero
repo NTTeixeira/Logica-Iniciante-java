@@ -1,0 +1,28 @@
+/* Escreva um programa que leia dois valores e imprima os números inteiros neste intervalo – pode ser crescente ou decrescente.*/
+
+package application;
+
+import java.util.Locale;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite dois número: ");
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
+		
+		for(int i=n1; i<=n2; i++) {
+			System.out.println(i);
+		}
+
+		sc.close();
+
+	}
+
+}
