@@ -1,0 +1,29 @@
+/* Ler dois valores (a,b) Mostrar entre 1 e 1000 quantos e quais números são divisíveis por a e b ao mesmo
+tempo.*/
+
+package application;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite dois valores: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();		
+		
+		for(int i=1; i<=1000; i++) {
+			
+			if(i%a==0 && i%b==0) {
+				System.out.println(i);
+			}
+		}		
+
+		sc.close();
+
+	}
+
+}
