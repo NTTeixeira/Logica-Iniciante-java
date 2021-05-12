@@ -1,0 +1,52 @@
+/*Faça um programa para adivinhar um número escolhido pelo usuário, entre 1 e 1023. Indique ao 
+final quantas tentativas foram necessárias. O programa deverá localizar o número escolhido pelo 
+usuário em no máximo 10 tentativas!
+Utilize a seguinte proposta. Pegue o valor intermediário e pergunte ao usuário se o número é 
+igual(=), maior(>) ou menor(<) que o que foi escolhido. Se for (=) implica que acertou! Se for maior 
+escolha agora o número intermediário entre o que foi perguntado e o último, caso contrário escolha o 
+intermediário entre o primeiro e o que foi perguntado, seguindo assim até acertar!
+Verifique que você conseguirá acertar qualquer número em no máximo 10 tentativas!!!*/
+
+package application;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class program {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Random rnd = new Random();
+        int inicial = 1024, fim = 0;
+
+        for (int i = 0; i <= 9; i++) {
+            int x = rnd.nextInt((inicial - fim) + 1) + fim;
+
+            System.out.println("Seu número é maior ou menor que: " + x );
+            System.out.println("> para maior, < para menor, = para igual");
+            char aux = sc.next().charAt(0);
+
+            if (aux == '>') {
+                if (fim < x) {
+                    fim = x;
+                }
+            }
+            if (aux == '<') {
+                if (inicial > x) {
+                    inicial = x;
+                }
+            }
+            if(aux == '=') {
+                System.out.println("Acertou!!");
+            }
+        }
+
+        System.out.println("Fim");
+
+        sc.close();
+
+    }
+
+}
