@@ -1,0 +1,45 @@
+/*Números palíndromos são aqueles que escritos da direita para esquerda ou da esquerda para direita tem o mesmo valor. 
+Exemplo:929, 44, 97379. Fazer um algoritmo que dado um numero de 5 dígitos; calcule e escreva se este e ou não palíndromo.*/
+
+package application;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int n1, n2, n3, n4, n5, aux;
+		
+		System.out.print("Digite um número de 5 dígitos: ");
+		int n = sc.nextInt();
+		
+		n1 = n / 10000;
+		aux = n % 10000;
+		
+		n2 = aux / 1000;
+		aux = aux % 1000;
+		
+		n3 = aux / 100;
+		aux = aux % 100;
+		
+		n4 = aux / 10;
+		n5 = aux % 10;
+		
+		int inverter = (n5 * 10000) + (n4 * 1000) + (n3 * 100) + (n2 * 10) + n1;
+		
+		System.out.println(inverter);
+		
+		if(n == inverter) {
+			System.out.println("O número é políndromo.");
+		}else {
+			System.out.println("O número não é políndromo.");
+		}
+		
+		sc.close();
+
+	}
+
+}
