@@ -1,0 +1,41 @@
+/* Faça um programa para calcular e imprimir o fatorial de um número lido do teclado.
+Ex. Fatorial de 5! = 5x4x3x2x1=120*/
+
+package application;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int aux = 1, x;
+		
+		System.out.print("Digite um número: ");
+		int fat = sc.nextInt();
+		
+		aux = fat;
+		x = fat;
+		System.out.print("Fatorial de "+ fat + "! = " );
+		while(aux != 0) {			
+			aux -= 1;			
+			if(aux > 1) {
+				fat *= aux;
+			}
+		}
+		for(int i=x; i >= 1; i--) {
+			if(i == 1) {
+				System.out.printf("%d", i);
+			}if(i > 1) {
+				System.out.printf("%d%s", i, "x");
+			}
+		}		
+		System.out.println(" = "+fat);
+		
+		sc.close();
+
+	}
+
+}
