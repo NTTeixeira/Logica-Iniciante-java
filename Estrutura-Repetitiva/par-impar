@@ -1,0 +1,34 @@
+/* Faça um algoritmo que leia um conjunto de números (X) e imprima a quantidade de números pares
+(QPares) e a quantidade de números impares (QImpares) lidos. Admita que o valor 9999 é utilizado como
+sentinela (FLAG) para fim de leitura. Ex.: 1,2,3,4,5,9999 => Pares=2 Impares=3*/
+
+package application;
+
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int qImp = 0, qPar = 0;
+		System.out.println("Digite um número:");
+		int x = sc.nextInt();
+		
+		do{		
+			if(x % 2 == 0) {
+				qPar += 1;
+			}else {
+				qImp += 1;
+			}
+			x = sc.nextInt();
+		}
+		while(x != 9999);
+		
+		System.out.println("Pares = " + qPar + " Impares = " + qImp);
+		sc.close();
+
+	}
+
+}
